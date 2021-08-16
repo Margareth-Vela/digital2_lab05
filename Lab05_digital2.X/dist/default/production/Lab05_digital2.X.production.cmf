@@ -28,7 +28,7 @@ bssBANK0 BANK0 1 31 31 4 1
 dataCOMMON COMMON 1 7D 7D 1 1
 bssCOMMON COMMON 1 7A 7A 3 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\vema3\AppData\Local\Temp\s360.o
+$C:\Users\vema3\AppData\Local\Temp\sc40.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -77,20 +77,20 @@ STRING 2DD-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab05_digital2.X.production.o
-F cinit CODE >519:C:\Users\vema3\AppData\Local\Temp\s360.s
-F cinit CODE >522:C:\Users\vema3\AppData\Local\Temp\s360.s
-F cinit CODE >563:C:\Users\vema3\AppData\Local\Temp\s360.s
-14 cinit CODE >564:C:\Users\vema3\AppData\Local\Temp\s360.s
-15 cinit CODE >568:C:\Users\vema3\AppData\Local\Temp\s360.s
-16 cinit CODE >569:C:\Users\vema3\AppData\Local\Temp\s360.s
-17 cinit CODE >570:C:\Users\vema3\AppData\Local\Temp\s360.s
-18 cinit CODE >571:C:\Users\vema3\AppData\Local\Temp\s360.s
-19 cinit CODE >574:C:\Users\vema3\AppData\Local\Temp\s360.s
-1A cinit CODE >575:C:\Users\vema3\AppData\Local\Temp\s360.s
-1B cinit CODE >576:C:\Users\vema3\AppData\Local\Temp\s360.s
-1C cinit CODE >582:C:\Users\vema3\AppData\Local\Temp\s360.s
-1C cinit CODE >584:C:\Users\vema3\AppData\Local\Temp\s360.s
-1D cinit CODE >585:C:\Users\vema3\AppData\Local\Temp\s360.s
+F cinit CODE >519:C:\Users\vema3\AppData\Local\Temp\sc40.s
+F cinit CODE >522:C:\Users\vema3\AppData\Local\Temp\sc40.s
+F cinit CODE >563:C:\Users\vema3\AppData\Local\Temp\sc40.s
+14 cinit CODE >564:C:\Users\vema3\AppData\Local\Temp\sc40.s
+15 cinit CODE >568:C:\Users\vema3\AppData\Local\Temp\sc40.s
+16 cinit CODE >569:C:\Users\vema3\AppData\Local\Temp\sc40.s
+17 cinit CODE >570:C:\Users\vema3\AppData\Local\Temp\sc40.s
+18 cinit CODE >571:C:\Users\vema3\AppData\Local\Temp\sc40.s
+19 cinit CODE >574:C:\Users\vema3\AppData\Local\Temp\sc40.s
+1A cinit CODE >575:C:\Users\vema3\AppData\Local\Temp\sc40.s
+1B cinit CODE >576:C:\Users\vema3\AppData\Local\Temp\sc40.s
+1C cinit CODE >582:C:\Users\vema3\AppData\Local\Temp\sc40.s
+1C cinit CODE >584:C:\Users\vema3\AppData\Local\Temp\sc40.s
+1D cinit CODE >585:C:\Users\vema3\AppData\Local\Temp\sc40.s
 4 intentry CODE >95:C:\Users\vema3\OneDrive\Documents\GitHub\digital2_lab05\Lab05_digital2.X\Lab05.c
 2C7 text5 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
 2C8 text5 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
@@ -276,10 +276,10 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _IOCB 96 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\vema3\AppData\Local\Temp\s360.o
+___sp 0 0 STACK 2 stack C:\Users\vema3\AppData\Local\Temp\sc40.o
 _main 226 0 CODE 0 maintext dist/default/production\Lab05_digital2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
-start 18 0 CODE 0 init C:\Users\vema3\AppData\Local\Temp\s360.o
+start 18 0 CODE 0 init C:\Users\vema3\AppData\Local\Temp\sc40.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
@@ -288,12 +288,12 @@ _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Lab05_digital2.X.production
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 26 0 BANK0 1 cstackBANK0 dist/default/production\Lab05_digital2.X.production.o
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\s360.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\s360.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\s360.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\s360.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\s360.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\s360.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\sc40.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\sc40.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\sc40.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\sc40.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\sc40.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\vema3\AppData\Local\Temp\sc40.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\Lab05_digital2.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
@@ -314,8 +314,8 @@ ___bmul@multiplier 73 0 COMMON 1 cstackCOMMON dist/default/production\Lab05_digi
 ___awdiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab05_digital2.X.production.o
 __end_of___awdiv 45E 0 CODE 0 text3 dist/default/production\Lab05_digital2.X.production.o
 __end_of___awmod 514 0 CODE 0 text2 dist/default/production\Lab05_digital2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\vema3\AppData\Local\Temp\s360.o
-___stacklo 0 0 ABS 0 - C:\Users\vema3\AppData\Local\Temp\s360.o
+___stackhi 0 0 ABS 0 - C:\Users\vema3\AppData\Local\Temp\sc40.o
+___stacklo 0 0 ABS 0 - C:\Users\vema3\AppData\Local\Temp\sc40.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 __size_of_setup 0 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
@@ -324,7 +324,7 @@ start_initialization 1E 0 CODE 0 cinit dist/default/production\Lab05_digital2.X.
 _cont_temp 7A 0 COMMON 1 bssCOMMON dist/default/production\Lab05_digital2.X.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Lab05_digital2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\vema3\AppData\Local\Temp\s360.o
+___int_sp 0 0 STACK 2 stack C:\Users\vema3\AppData\Local\Temp\sc40.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -375,7 +375,7 @@ __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 __end_of_isr 226 0 CODE 0 text4 dist/default/production\Lab05_digital2.X.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\vema3\AppData\Local\Temp\s360.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\vema3\AppData\Local\Temp\sc40.o
 __size_of___bmul 0 0 ABS 0 - dist/default/production\Lab05_digital2.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@counter 25 0 BANK0 1 cstackBANK0 dist/default/production\Lab05_digital2.X.production.o
