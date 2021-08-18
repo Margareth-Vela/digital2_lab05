@@ -2752,8 +2752,6 @@ void __attribute__((picinterrupt(("")))) isr(void){
         }
         else if (c_flag == 1){
             valor = (unidad*100)+(decena*10)+cont_temp;
-            d_flag = 0;
-            c_flag = 1;
         }
         }}
 }

@@ -24,19 +24,19 @@
 //------------------------------------------------------------------------------
 //                          Variables
 //------------------------------------------------------------------------------
-uint8_t contador;
+uint8_t contador; //Variables para el contador 
 uint8_t unidades = 0;
 uint8_t decenas = 0;
 uint8_t centenas = 0;
 uint8_t decenas_temp = 0;
 
-uint8_t u_flag = 1;
+uint8_t u_flag = 1; //Variables para el valor que recibe el pic 
 uint8_t d_flag = 0;
 uint8_t c_flag = 0;
 uint8_t unidad = 0;
 uint8_t decena = 0;
 uint8_t valor = 0;
-uint8_t var_temp = 0;
+uint8_t var_temp = 0; //Variables temporales
 uint8_t cont_temp = 0;
 
 //------------------------------------------------------------------------------
@@ -75,13 +75,13 @@ void main(void) {
 
         if (PIR1bits.TXIF){
                     __delay_ms(20);
-                    TXREG = centenas + 48; //Envía las unidades del POT1
+                    TXREG = centenas + 48; //Envía el valor de centenas del contador
                     __delay_ms(20);
-                    TXREG = decenas + 48; //Envía el primer decimal del POT1
+                    TXREG = decenas + 48; //Envía el valor de decenas del contador
                     __delay_ms(20);
-                    TXREG = unidades + 48; //Envía el segundo decimal del POT1
+                    TXREG = unidades + 48; //Envía el valor de unidades del contador
                     __delay_ms(20);
-                    TXREG = 0x0D;
+                    TXREG = 0x0D; //Envia el valor de enter
                     __delay_ms(20);
             }
         PIR1bits.TXIF = 0; //Se limpia la bandera
@@ -95,10 +95,10 @@ void main(void) {
 void __interrupt() isr(void){    
     if(INTCONbits.RBIF){
             if (PORTBbits.RB0 == 0){ //Si el botón de incremento está presionado,
-                PORTD++; //se incrementa PORTA
+                PORTD++; //se incrementa PORTD
             }
             if(PORTBbits.RB1 == 0) {//Si el botón de decremento está presionado,
-                PORTD--; //se decrementa PORTA
+                PORTD--; //se decrementa PORTD
             }
         INTCONbits.RBIF = 0; //Se limpia la bandera
         }
@@ -106,7 +106,7 @@ void __interrupt() isr(void){
         
     if(PIR1bits.RCIF == 1){ //Empieza a recibir datos del USART
         if (RCREG ==  0x0D){
-        PORTA = valor; 
+        PORTA = valor; //Se coloca el valor que recibe el pic a PORTA
         cont_temp = 0;
         valor = 0;
         u_flag = 1;
@@ -115,7 +115,7 @@ void __interrupt() isr(void){
         }
         
         if (RCREG !=  0x0D){
-        var_temp = RCREG;
+        var_temp = RCREG; //Cambio de valor ASCII a decimal
             if(var_temp==48){
                 cont_temp = 0;
             }else if(var_temp==49){
@@ -141,18 +141,16 @@ void __interrupt() isr(void){
             valor = cont_temp;
             unidad = cont_temp;
             u_flag = 0;
-            d_flag = 1;
+            d_flag = 1; //Se enciende el valor de decenas
         }
         else if (d_flag == 1){
             valor = (unidad*10)+cont_temp;
             decena = cont_temp;
             d_flag = 0;
-            c_flag = 1;
+            c_flag = 1; //Se enciende el valor de centenas
         }
         else if (c_flag == 1){
             valor = (unidad*100)+(decena*10)+cont_temp;
-            d_flag = 0;
-            c_flag = 1;
         }     
         }}
 }
@@ -163,7 +161,7 @@ void __interrupt() isr(void){
 void setup(){
     
     //Configuracion reloj
-    OSCCONbits.IRCF2 = 1; //Frecuencia a 4MHZ
+    OSCCONbits.IRCF2 = 1; //Frecuencia a 8MHZ
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF0 = 1;
     OSCCONbits.SCS = 1;
@@ -174,8 +172,8 @@ void setup(){
     
     TRISA = 0x00; //Para salida del contador
     TRISB = 0x03; //Para push buttons
-    TRISC = 0x80;
-    TRISD = 0x00;
+    TRISC = 0x80; //Para FTDI
+    TRISD = 0x00; //Para contador
                
     //Habilitar pullups
     OPTION_REGbits.nRBPU = 0;
@@ -188,9 +186,9 @@ void setup(){
     
     //Configurar la interrupcion
     INTCONbits.GIE = 1;  //Enable interrupciones globales   
-    INTCONbits.PEIE = 1;
-    PIE1bits.RCIE = 1;
-    PIR1bits.RCIF = 0;
+    INTCONbits.PEIE = 1; //Enable de periféricos
+    PIE1bits.RCIE = 1;   //Enable RC
+    PIR1bits.RCIF = 0;   //Se limpia la bandera
     
     //Interrupcion PORTB
     INTCONbits.RBIE = 1; //Enable Interrupt on change

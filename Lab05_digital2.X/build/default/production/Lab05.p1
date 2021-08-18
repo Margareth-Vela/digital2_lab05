@@ -628,17 +628,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "95
-[; ;Lab05.c: 95:         }
+[; ;Lab05.c: 95: }
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
 "96
-[; ;Lab05.c: 96:         }}
+[; ;Lab05.c: 96: 
 [e $ ! != -> . . _INTCONbits 0 0 `i -> 0 `i 144  ]
 {
 "97
-[; ;Lab05.c: 97: }
+[; ;Lab05.c: 97: 
 [e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 145  ]
 {
 "98
@@ -649,159 +649,159 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 145 ]
 "100
-[; ;Lab05.c: 100: 
+[; ;Lab05.c: 100: void setup(){
 [e $ ! == -> . . _PORTBbits 0 1 `i -> 0 `i 146  ]
 {
 "101
 [; ;Lab05.c: 101: 
 [e -- _PORTD -> -> 1 `i `Vuc ]
 "102
-[; ;Lab05.c: 102: void setup(){
+[; ;Lab05.c: 102: 
 }
 [e :U 146 ]
 "103
-[; ;Lab05.c: 103: 
+[; ;Lab05.c: 103:     OSCCONbits.IRCF2 = 1;
 [e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
 "104
-[; ;Lab05.c: 104: 
+[; ;Lab05.c: 104:     OSCCONbits.IRCF1 = 1;
 }
 [e :U 144 ]
 "107
-[; ;Lab05.c: 107:     OSCCONbits.IRCF0 = 1;
+[; ;Lab05.c: 107: 
 [e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 147  ]
 {
 "108
-[; ;Lab05.c: 108:     OSCCONbits.SCS = 1;
+[; ;Lab05.c: 108: 
 [e $ ! == -> _RCREG `i -> 13 `i 148  ]
 {
 "109
-[; ;Lab05.c: 109: 
+[; ;Lab05.c: 109:     ANSELH = 0x00;
 [e = _PORTA _valor ]
 "110
-[; ;Lab05.c: 110: 
+[; ;Lab05.c: 110:     ANSEL = 0x00;
 [e = _cont_temp -> -> 0 `i `uc ]
 "111
-[; ;Lab05.c: 111:     ANSELH = 0x00;
+[; ;Lab05.c: 111: 
 [e = _valor -> -> 0 `i `uc ]
 "112
-[; ;Lab05.c: 112:     ANSEL = 0x00;
+[; ;Lab05.c: 112:     TRISA = 0x00;
 [e = _u_flag -> -> 1 `i `uc ]
 "113
-[; ;Lab05.c: 113: 
+[; ;Lab05.c: 113:     TRISB = 0x03;
 [e = _d_flag -> -> 0 `i `uc ]
 "114
-[; ;Lab05.c: 114:     TRISA = 0x00;
+[; ;Lab05.c: 114:     TRISC = 0x80;
 [e = _c_flag -> -> 0 `i `uc ]
 "115
-[; ;Lab05.c: 115:     TRISB = 0x03;
+[; ;Lab05.c: 115:     TRISD = 0x00;
 }
 [e :U 148 ]
 "117
-[; ;Lab05.c: 117:     TRISD = 0x00;
+[; ;Lab05.c: 117: 
 [e $ ! != -> _RCREG `i -> 13 `i 149  ]
 {
 "118
-[; ;Lab05.c: 118: 
+[; ;Lab05.c: 118:     OPTION_REGbits.nRBPU = 0;
 [e = _var_temp _RCREG ]
 "119
-[; ;Lab05.c: 119: 
+[; ;Lab05.c: 119:     WPUB = 0x03;
 [e $ ! == -> _var_temp `i -> 48 `i 150  ]
 {
 "120
-[; ;Lab05.c: 120:     OPTION_REGbits.nRBPU = 0;
+[; ;Lab05.c: 120: 
 [e = _cont_temp -> -> 0 `i `uc ]
 "121
-[; ;Lab05.c: 121:     WPUB = 0x03;
+[; ;Lab05.c: 121:     PORTA = 0x00;
 }
 [e $U 151  ]
 [e :U 150 ]
 [e $ ! == -> _var_temp `i -> 49 `i 152  ]
 {
 "122
-[; ;Lab05.c: 122: 
+[; ;Lab05.c: 122:     PORTB = 0x03;
 [e = _cont_temp -> -> 1 `i `uc ]
 "123
-[; ;Lab05.c: 123:     PORTA = 0x00;
+[; ;Lab05.c: 123:     PORTC = 0x00;
 }
 [e $U 153  ]
 [e :U 152 ]
 [e $ ! == -> _var_temp `i -> 50 `i 154  ]
 {
 "124
-[; ;Lab05.c: 124:     PORTB = 0x03;
+[; ;Lab05.c: 124:     PORTD = 0x00;
 [e = _cont_temp -> -> 2 `i `uc ]
 "125
-[; ;Lab05.c: 125:     PORTC = 0x00;
+[; ;Lab05.c: 125: 
 }
 [e $U 155  ]
 [e :U 154 ]
 [e $ ! == -> _var_temp `i -> 51 `i 156  ]
 {
 "126
-[; ;Lab05.c: 126:     PORTD = 0x00;
+[; ;Lab05.c: 126: 
 [e = _cont_temp -> -> 3 `i `uc ]
 "127
-[; ;Lab05.c: 127: 
+[; ;Lab05.c: 127:     INTCONbits.GIE = 1;
 }
 [e $U 157  ]
 [e :U 156 ]
 [e $ ! == -> _var_temp `i -> 52 `i 158  ]
 {
 "128
-[; ;Lab05.c: 128: 
+[; ;Lab05.c: 128:     INTCONbits.PEIE = 1;
 [e = _cont_temp -> -> 4 `i `uc ]
 "129
-[; ;Lab05.c: 129:     INTCONbits.GIE = 1;
+[; ;Lab05.c: 129:     PIE1bits.RCIE = 1;
 }
 [e $U 159  ]
 [e :U 158 ]
 [e $ ! == -> _var_temp `i -> 53 `i 160  ]
 {
 "130
-[; ;Lab05.c: 130:     INTCONbits.PEIE = 1;
+[; ;Lab05.c: 130:     PIR1bits.RCIF = 0;
 [e = _cont_temp -> -> 5 `i `uc ]
 "131
-[; ;Lab05.c: 131:     PIE1bits.RCIE = 1;
+[; ;Lab05.c: 131: 
 }
 [e $U 161  ]
 [e :U 160 ]
 [e $ ! == -> _var_temp `i -> 54 `i 162  ]
 {
 "132
-[; ;Lab05.c: 132:     PIR1bits.RCIF = 0;
+[; ;Lab05.c: 132: 
 [e = _cont_temp -> -> 6 `i `uc ]
 "133
-[; ;Lab05.c: 133: 
+[; ;Lab05.c: 133:     INTCONbits.RBIE = 1;
 }
 [e $U 163  ]
 [e :U 162 ]
 [e $ ! == -> _var_temp `i -> 55 `i 164  ]
 {
 "134
-[; ;Lab05.c: 134: 
+[; ;Lab05.c: 134:     IOCB = 0x03;
 [e = _cont_temp -> -> 7 `i `uc ]
 "135
-[; ;Lab05.c: 135:     INTCONbits.RBIE = 1;
+[; ;Lab05.c: 135:     INTCONbits.RBIF = 0;
 }
 [e $U 165  ]
 [e :U 164 ]
 [e $ ! == -> _var_temp `i -> 56 `i 166  ]
 {
 "136
-[; ;Lab05.c: 136:     IOCB = 0x03;
+[; ;Lab05.c: 136: 
 [e = _cont_temp -> -> 8 `i `uc ]
 "137
-[; ;Lab05.c: 137:     INTCONbits.RBIF = 0;
+[; ;Lab05.c: 137: 
 }
 [e $U 167  ]
 [e :U 166 ]
 [e $ ! == -> _var_temp `i -> 57 `i 168  ]
 {
 "138
-[; ;Lab05.c: 138: 
+[; ;Lab05.c: 138:     TXSTAbits.SYNC = 0;
 [e = _cont_temp -> -> 9 `i `uc ]
 "139
-[; ;Lab05.c: 139: 
+[; ;Lab05.c: 139:     TXSTAbits.BRGH = 1;
 }
 [e :U 168 ]
 [e :U 167 ]
@@ -814,143 +814,137 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 153 ]
 [e :U 151 ]
 "140
-[; ;Lab05.c: 140:     TXSTAbits.SYNC = 0;
+[; ;Lab05.c: 140: 
 [e $ ! == -> _u_flag `i -> 1 `i 169  ]
 {
 "141
-[; ;Lab05.c: 141:     TXSTAbits.BRGH = 1;
+[; ;Lab05.c: 141:     BAUDCTLbits.BRG16 = 1;
 [e = _valor _cont_temp ]
 "142
 [; ;Lab05.c: 142: 
 [e = _unidad _cont_temp ]
 "143
-[; ;Lab05.c: 143:     BAUDCTLbits.BRG16 = 1;
+[; ;Lab05.c: 143:     SPBRG = 207;
 [e = _u_flag -> -> 0 `i `uc ]
 "144
-[; ;Lab05.c: 144: 
+[; ;Lab05.c: 144:     SPBRGH = 0;
 [e = _d_flag -> -> 1 `i `uc ]
 "145
-[; ;Lab05.c: 145:     SPBRG = 207;
+[; ;Lab05.c: 145: 
 }
 [e $U 170  ]
 "146
-[; ;Lab05.c: 146:     SPBRGH = 0;
+[; ;Lab05.c: 146:     RCSTAbits.SPEN = 1;
 [e :U 169 ]
 [e $ ! == -> _d_flag `i -> 1 `i 171  ]
 {
 "147
-[; ;Lab05.c: 147: 
+[; ;Lab05.c: 147:     RCSTAbits.RX9 = 0;
 [e = _valor -> + * -> _unidad `i -> 10 `i -> _cont_temp `i `uc ]
 "148
-[; ;Lab05.c: 148:     RCSTAbits.SPEN = 1;
+[; ;Lab05.c: 148:     RCSTAbits.CREN = 1;
 [e = _decena _cont_temp ]
 "149
-[; ;Lab05.c: 149:     RCSTAbits.RX9 = 0;
+[; ;Lab05.c: 149: 
 [e = _d_flag -> -> 0 `i `uc ]
 "150
-[; ;Lab05.c: 150:     RCSTAbits.CREN = 1;
+[; ;Lab05.c: 150:     TXSTAbits.TXEN = 1;
 [e = _c_flag -> -> 1 `i `uc ]
 "151
-[; ;Lab05.c: 151: 
+[; ;Lab05.c: 151:     return;
 }
 [e $U 172  ]
 "152
-[; ;Lab05.c: 152:     TXSTAbits.TXEN = 1;
+[; ;Lab05.c: 152:  }
 [e :U 171 ]
 [e $ ! == -> _c_flag `i -> 1 `i 173  ]
 {
 "153
-[; ;Lab05.c: 153:     return;
 [e = _valor -> + + * -> _unidad `i -> 100 `i * -> _decena `i -> 10 `i -> _cont_temp `i `uc ]
 "154
-[; ;Lab05.c: 154:  }
-[e = _d_flag -> -> 0 `i `uc ]
-"155
-[e = _c_flag -> -> 1 `i `uc ]
-"156
 }
 [e :U 173 ]
 [e :U 172 ]
 [e :U 170 ]
-"157
+"155
 }
 [e :U 149 ]
 }
 [e :U 147 ]
-"158
+"156
 [e :UE 143 ]
 }
-"163
+"161
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"166
+"164
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"167
+"165
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"168
+"166
 [e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
-"169
+"167
 [e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"172
+"170
 [e = _ANSELH -> -> 0 `i `uc ]
-"173
+"171
 [e = _ANSEL -> -> 0 `i `uc ]
-"175
+"173
 [e = _TRISA -> -> 0 `i `uc ]
-"176
+"174
 [e = _TRISB -> -> 3 `i `uc ]
-"177
+"175
 [e = _TRISC -> -> 128 `i `uc ]
-"178
+"176
 [e = _TRISD -> -> 0 `i `uc ]
-"181
+"179
 [e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-"182
+"180
 [e = _WPUB -> -> 3 `i `uc ]
-"184
+"182
 [e = _PORTA -> -> 0 `i `uc ]
-"185
+"183
 [e = _PORTB -> -> 3 `i `uc ]
-"186
+"184
 [e = _PORTC -> -> 0 `i `uc ]
-"187
+"185
 [e = _PORTD -> -> 0 `i `uc ]
-"190
+"188
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"191
+"189
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"192
+"190
 [e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"193
+"191
 [e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-"196
+"194
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"197
+"195
 [e = _IOCB -> -> 3 `i `uc ]
-"198
+"196
 [e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"201
+"199
 [e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-"202
+"200
 [e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-"204
+"202
 [e = . . _BAUDCTLbits 0 3 -> -> 1 `i `uc ]
-"206
+"204
 [e = _SPBRG -> -> 207 `i `uc ]
-"207
+"205
 [e = _SPBRGH -> -> 0 `i `uc ]
-"209
+"207
 [e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-"210
+"208
 [e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
-"211
+"209
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"213
+"211
 [e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"214
+"212
 [e $UE 174  ]
-"215
+"213
 [e :UE 174 ]
 }
